@@ -63,15 +63,15 @@ public class UserService {
         User user = userRepository.findById(id).orElse(null);
 
         if (user == null) {
-            return null; // Return null if the user is not found
+            return null; 
         }
 
         if (user.getBalance() < 100) {
-            return null; // Return null if the user does not have enough balance
+            return null; 
         }
 
         user.setBalance(user.getBalance() - 100);
-        user.set_prime(true);  // Assuming the correct field is 'isPrime'
+        user.set_prime(true);  
         user.setPrimeStartDate(LocalDate.now());
         user.setPrimeEndDate(LocalDate.now().plusYears(1));
         userRepository.save(user);
