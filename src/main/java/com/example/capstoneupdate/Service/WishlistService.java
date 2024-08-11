@@ -49,7 +49,7 @@ public class WishlistService {
 //        if (user != null) {
 //            return user. // Return the user's wishlist
 //        }
-//        return new ArrayList<>(); // Return an empty list if the user is not found
+//        return new ArrayList<>(); 
 //    }
 
 
